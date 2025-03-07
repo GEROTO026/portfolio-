@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #cce7f0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            margin-top: 10px;
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .skills, .about, .projects {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .skills {
+            width: 40%;
+            text-align: center;
+        }
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        .skills-icons {
+            display: flex;
+            justify-content: center;
+        }
+        .skills-icons div {
+            margin: 10px;
+            text-align: center;
+        }
+        .skills-icons img {
+            width: 40px;
+            height: 40px;
+        }
+        span {
+            color: #0a4;
+        }
+        .JS-status {
+            color: #e84;
+        }
+        .about {
+            width: 40%;
+        }
+        .projects {
+            width: 100%;
+        }
+        .project-list {
+            display: flex;
+            flex-direction: column;
+        }
+        .project {
+            background: #f9f9f9;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .project img, a{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .project-open {
+            gap: 20;
+        }
+        .contact, .contact_link {
+            width: 100%;
+            background: #4285f4;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .skills, .about {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Skills Section -->
+        <section class="skills">
+            <img src="Skills.png" alt="Profile Picture" class="profile-pic">
+            <h2>SKILLS</h2>
+            <div class="skills-icons">
+                <div>
+                    <img src="logo-2582748_1280.png" alt="HTML">
+                    <p>HTML<br><span>Advanced</span></p>
+                </div>
+                <div>
+                    <img src="logo-2582747_1280.png" alt="CSS">
+                    <p>CSS<br><span>Advanced</span></p>
+                </div>
+                <div>
+                    <img src="javascript-736400_1280.png" alt="JavaScript">
+                    <p>JavaScript<br><span class="JS-status">Medium</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section class="about">
+            <h2>About Me</h2>
+            <p>👋 I am a frontend developer passionate about bringing dynamic and engaging web experiences.</p>
+            <p>💻 I master in <strong>HTML, CSS and JavaScript</strong>.</p>
+            <p>🎨 I love to design all kinds of interfaces, but all with a single objective ... <strong>to be optimal, ensuring the best user experience.</strong></p>
+            <p>🚀 My goal is to continue growing in the development world and <strong>create innovative solutions.</strong></p>
+            <p></p>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects">
+            <h2>MY PROJECT</h2>
+            <div class="project-list">
+                <div class="project">
+                    <p>PROJECT 1: <strong>Dashboard interactive</strong></p>
+                    <div class="project-open">
+                        <a href="https://github.com/GEROTO026/Project-1-Dashboard-Interactive" target="_blank"><img src="github-6980894_1280.png" alt="GitHub"></a>
+                        <a href="https://dashboard-interactive1project.netlify.app/" target="_blank"><img src="logout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Open Dashboard interactive"></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <p>PROJECT 2: <strong>To-do List</strong></p>
+                    <div class="project-open">
+                        <a href="https://github.com/GEROTO026/Project-2-To-Do-List" target="_blank"><img src="github-6980894_1280.png" alt="GitHub"></a>
+                        <a href="https://to-do-list2project.netlify.app/" target="_blank"><img src="logout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Open To-do List"></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <p>PROJECT 3: <strong>Netflix clone</strong></p>
+                    <div class="project-open">
+                        <a href="https://github.com/GEROTO026/Project-3-Netflix-Clone" target="_blank"><img src="github-6980894_1280.png" alt="GitHub"></a>
+                        <a href="https://ntx-lp-clone3project.netlify.app/" target="_blank"><img src="logout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Open Netflix clone"></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <p>PROJECT 4: <strong>Clothing store</strong></p>
+                    <div class="project-open">
+                        <a href="https://github.com/GEROTO026/Project-4-Clothing-store" target="_blank"><img src="github-6980894_1280.png" alt="GitHub"></a>
+                        <a href="https://clothingstore-project4.netlify.app/" target="_blank"><img src="logout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Open Netflix clone"></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <p>PROJECT 5: <strong>Scientific Calculator</strong></p>
+                    <div class="project-open">
+                        <a href="https://github.com/GEROTO026/Project-5-Scientific-Calculator" target="_blank"><img src="github-6980894_1280.png" alt="GitHub"></a>
+                        <a href="https://scientific-calculator-project5.netlify.app/" target="_blank"><img src="logout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Open Netflix clone"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Button -->
+        <a href="contact.html" class="contact_link"><button class="contact">CONTACT</button></a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
