@@ -76,13 +76,32 @@
             margin-bottom: 10px;
             border-radius: 5px;
         }
-        .project img, a{
+        .project img, a {
             width: 40px;
             height: 40px;
             border-radius: 50%;
         }
+        .hidden {
+            display: none; /* Hides projects with this class */
+        }
+        #show-more {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s ease;
+        }
+        #show-more:hover {
+            background: #555;
+        }
         .project-open {
-            gap: 20;
+            display: flex;
+            gap: 20px; /* Fixed 'gap: 20' to proper CSS syntax */
         }
         .contact, .contact_link {
             width: 100%;
@@ -93,6 +112,7 @@
             border-radius: 5px;
             font-size: 16px;
             cursor: pointer;
+            text-align: center; /* Added for better alignment */
         }
         @media (max-width: 768px) {
             .skills, .about {
@@ -130,48 +150,62 @@
             <p>💻 I master in <strong>HTML, CSS and JavaScript</strong>.</p>
             <p>🎨 I love to design all kinds of interfaces, but all with a single objective ... <strong>to be optimal, ensuring the best user experience.</strong></p>
             <p>🚀 My goal is to continue growing in the development world and <strong>create innovative solutions.</strong></p>
-            <p></p>
         </section>
 
         <!-- Projects Section -->
         <section class="projects">
-            <h2>MY PROJECT</h2>
+            <h2>MY PROJECTS</h2>
             <div class="project-list">
                 <div class="project">
-                    <p>PROJECT 1: <strong>Dashboard interactive</strong></p>
+                    <p>PROJECT 1: <strong>Dashboard Interactive</strong></p>
                     <div class="project-open">
                         <a href="https://github.com/GEROTO026/Project-1-Dashboard-Interactive" target="_blank"><img src="github-6980894_1280.png" alt="GitHub"></a>
-                        <a href="https://dashboard-interactive1project.netlify.app/" target="_blank"><img src="logout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Open Dashboard interactive"></a>
+                        <a href="https://dashboard-interactive1project.netlify.app/" target="_blank"><img src="logout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Open Dashboard Interactive"></a>
                     </div>
                 </div>
                 <div class="project">
-                    <p>PROJECT 2: <strong>To-do List</strong></p>
+                    <p>PROJECT 2: <strong>To-Do List</strong></p>
                     <div class="project-open">
                         <a href="https://github.com/GEROTO026/Project-2-To-Do-List" target="_blank"><img src="github-6980894_1280.png" alt="GitHub"></a>
-                        <a href="https://to-do-list2project.netlify.app/" target="_blank"><img src="logout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Open To-do List"></a>
+                        <a href="https://to-do-list2project.netlify.app/" target="_blank"><img src="logout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Open To-Do List"></a>
                     </div>
                 </div>
                 <div class="project">
-                    <p>PROJECT 3: <strong>Netflix clone</strong></p>
+                    <p>PROJECT 3: <strong>Netflix Clone</strong></p>
                     <div class="project-open">
                         <a href="https://github.com/GEROTO026/Project-3-Netflix-Clone" target="_blank"><img src="github-6980894_1280.png" alt="GitHub"></a>
-                        <a href="https://ntx-lp-clone3project.netlify.app/" target="_blank"><img src="logout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Open Netflix clone"></a>
+                        <a href="https://ntx-lp-clone3project.netlify.app/" target="_blank"><img src="logout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Open Netflix Clone"></a>
                     </div>
                 </div>
-                <div class="project">
-                    <p>PROJECT 4: <strong>Clothing store</strong></p>
+                <div class="project hidden">
+                    <p>PROJECT 4: <strong>Clothing Store</strong></p>
                     <div class="project-open">
-                        <a href="https://github.com/GEROTO026/Project-4-Clothing-store" target="_blank"><img src="github-6980894_1280.png" alt="GitHub"></a>
-                        <a href="https://clothingstore-project4.netlify.app/" target="_blank"><img src="logout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Open Netflix clone"></a>
+                        <a href="https://github.com/GEROTO026/Project-4-Clothing-Store" target="_blank"><img src="github-6980894_1280.png" alt="GitHub"></a>
+                        <a href="https://clothingstore-project4.netlify.app/" target="_blank"><img src="logout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Open Clothing Store"></a>
                     </div>
                 </div>
-                <div class="project">
+                <div class="project hidden">
                     <p>PROJECT 5: <strong>Scientific Calculator</strong></p>
                     <div class="project-open">
                         <a href="https://github.com/GEROTO026/Project-5-Scientific-Calculator" target="_blank"><img src="github-6980894_1280.png" alt="GitHub"></a>
-                        <a href="https://scientific-calculator-project5.netlify.app/" target="_blank"><img src="logout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Open Netflix clone"></a>
+                        <a href="https://scientific-calculator-project5.netlify.app/" target="_blank"><img src="logout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Open Scientific Calculator"></a>
                     </div>
                 </div>
+                <div class="project hidden">
+                    <p>PROJECT 6: <strong>Tic-Tac-Toe</strong></p>
+                    <div class="project-open">
+                        <a href="https://github.com/GEROTO026/Project-6-Tic-Tac-Toe" target="_blank"><img src="github-6980894_1280.png" alt="GitHub"></a>
+                        <a href="https://project-6-tic-toc-toe.netlify.app/" target="_blank"><img src="logout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Open Tic-Tac-Toe"></a>
+                    </div>
+                </div>
+                <div class="project hidden">
+                    <p>PROJECT 7: <strong>The Best AIs for Everything</strong></p>
+                    <div class="project-open">
+                        <a href="https://github.com/GEROTO026/Project-7-The-Best-AIs-for-Everything" target="_blank"><img src="github-6980894_1280.png" alt="GitHub"></a>
+                        <a href="https://the-best-ais-for-everything-project7.netlify.app/" target="_blank"><img src="logout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Open Tic-Tac-Toe"></a>
+                    </div>
+                </div>
+                <button id="show-more">Show More</button>
             </div>
         </section>
 
@@ -179,6 +213,15 @@
         <a href="contact.html" class="contact_link"><button class="contact">CONTACT</button></a>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        // "Show More" Button
+        document.getElementById('show-more').addEventListener('click', () => {
+            const hiddenProjects = document.querySelectorAll('.project.hidden');
+            hiddenProjects.forEach(project => {
+                project.classList.remove('hidden');
+            });
+            document.getElementById('show-more').style.display = 'none';
+        });
+    </script>
 </body>
 </html>
