@@ -114,14 +114,127 @@
             cursor: pointer;
             text-align: center; /* Added for better alignment */
         }
+        /* Update container margins for better mobile spacing */
+        .container {
+            margin-top: 20px;
+            width: 95%;
+            max-width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding: 0 10px;
+        }
+        /* Update theme toggle for mobile */
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            width: 40px;
+            height: 40px;
+            font-size: 1.2em;
+        }
+        /* Enhanced responsive styles */
         @media (max-width: 768px) {
             .skills, .about {
                 width: 100%;
             }
+            
+            .skills-icons {
+                flex-wrap: wrap;
+            }
+
+            .project {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .project-open {
+                justify-content: center;
+            }
+
+            .profile-pic {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                margin-top: 10px;
+            }
+
+            .skills, .about, .projects {
+                padding: 15px;
+            }
+
+            .skills-icons div {
+                margin: 5px;
+            }
+
+            .skills-icons img {
+                width: 30px;
+                height: 30px;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            p {
+                font-size: 0.9em;
+            }
+
+            .contact {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
+        
+        /* Theme toggle button */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        /* Dark theme styles */
+        body.dark-theme {
+            background-color: #1a1a1a;
+        }
+
+        .dark-theme .skills,
+        .dark-theme .about,
+        .dark-theme .projects {
+            background: #2d2d2d;
+            color: #fff;
+        }
+
+        .dark-theme .project {
+            background: #3d3d3d;
+            color: #fff;
+        }
+
+        .dark-theme #show-more {
+            background: #4285f4;
+        }
+
+        .dark-theme #show-more:hover {
+            background: #5295f5;
         }
     </style>
 </head>
 <body>
+    <button class="theme-toggle" id="theme-toggle">🌓</button>
     <div class="container">
         <!-- Skills Section -->
         <section class="skills">
@@ -221,6 +334,22 @@
                 project.classList.remove('hidden');
             });
             document.getElementById('show-more').style.display = 'none';
+        });
+        // Theme Switcher
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-theme');
+        }
+
+        // Theme toggle handler
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            // Save theme preference
+            localStorage.setItem('theme', body.classList.contains('dark-theme') ? 'dark' : 'light');
         });
     </script>
 </body>
